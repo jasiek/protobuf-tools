@@ -127,6 +127,10 @@ RUN apk add cargo>1.26.0 \
   && cargo install --all-features --root $RUSTPATH --vers $RUST_PROTOBUF_VERSION protobuf-codegen
 ENV PATH $RUSTPATH/bin:$PATH
 
+# Install grpcio-tools
+RUN apk add python3 python3-dev
+RUN pip3 install grpcio-tools
+
 # Cleaning up
 RUN apk del \
   autoconf \
