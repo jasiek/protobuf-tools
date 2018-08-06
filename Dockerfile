@@ -129,7 +129,7 @@ ENV PATH $RUSTPATH/bin:$PATH
 
 # Install grpcio-tools
 RUN apk add python3 python3-dev
-RUN pip3 install grpcio-tools
+RUN pip3 install grpcio-tools bs4
 
 # Cleaning up
 RUN apk del \
